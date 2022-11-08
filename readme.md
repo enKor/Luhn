@@ -6,11 +6,11 @@
 
 Test results of method CalculateCheckDigit (or respective varian in other nugets) to calculate check digit.
 
-|                   Method |      Value |        Mean |     Error |   StdDev | Ratio | RatioSD |   Gen0 | Allocated | Alloc Ratio |
-|------------------------- |----------- |------------:|----------:|---------:|------:|--------:|-------:|----------:|------------:|
-|               EnKor Luhn | 2211041771 |    12.94 ns |  0.211 ns | 0.197 ns |  1.00 |    0.00 |      - |         - |          NA |
-|             LuhnNetNuget | 2211041771 |   219.22 ns |  2.528 ns | 2.365 ns | 16.95 |    0.35 | 0.0496 |     312 B |          NA |
-| CreditCardValidatorNuget | 2211041771 | 1,037.18 ns | 11.154 ns | 9.887 ns | 80.09 |    1.64 | 0.2460 |    1544 B |          NA |
+|                   Method |      Value |        Mean |     Error |   StdDev | Ratio | RatioSD |   Gen0 | Allocated |
+|------------------------- |----------- |------------:|----------:|---------:|------:|--------:|-------:|----------:|
+|               EnKor Luhn | 2211041771 |    12.94 ns |  0.211 ns | 0.197 ns |  1.00 |    0.00 |      - |         - |
+|             LuhnNetNuget | 2211041771 |   219.22 ns |  2.528 ns | 2.365 ns | 16.95 |    0.35 | 0.0496 |     312 B |
+| CreditCardValidatorNuget | 2211041771 | 1,037.18 ns | 11.154 ns | 9.887 ns | 80.09 |    1.64 | 0.2460 |    1544 B |
 
 
 Test results of method IsValid (or respective varian in other nugets) to check validity.
