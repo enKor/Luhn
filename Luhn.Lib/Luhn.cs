@@ -1,9 +1,11 @@
-﻿namespace EnKor.Luhn.Lib;
+﻿using System.Runtime.CompilerServices;
+
+namespace EnKor;
 
 /// <summary>
 /// <see cref="http://en.wikipedia.org/wiki/Luhn_algorithm">Luhn</see> (mod10) algorithm implementation helper
 /// </summary>
-public class LuhnHelper
+public static class Luhn
 {
     /// <summary>
     /// Calculates last check digit for <c>code</c>
@@ -12,7 +14,7 @@ public class LuhnHelper
     /// <returns>Check digit</returns>
     public static int CalculateCheckDigit(ReadOnlySpan<char> code)
     {
-        var sum = LuhnSum(code, 2);
+        var sum = Sum(code, 2);
 
         var mod = sum % 10;
 
@@ -22,19 +24,37 @@ public class LuhnHelper
     }
 
     /// <summary>
-    /// Validates code
+    /// Validates numeric code.
     /// </summary>
-    /// <param name="code">Full code (incl. check digit) to be validated</param>
-    /// <returns><c>true</c> when valid</returns>
-    public static bool Validate(ReadOnlySpan<char> code)
+    /// <param name="code">Full code (incl. check digit) to be validated. Only digit chars allowed.</param>
+    /// <returns><c>true</c> when code is valid</returns>
+    public static bool IsValid(ReadOnlySpan<char> code)
     {
-        var sum = LuhnSum(code, 1);
+        var sum = Sum(code, 1);
 
         return sum % 10 == 0;
     }
 
+    /// <summary>
+    /// Validates format if code is Luhn input compliant.
+    /// </summary>
+    /// <param name="code">Full code (incl. check digit) to validate the format.</param>
+    /// <returns><c>true</c> when format is valid</returns>
+    public static bool IsFormatValid(ReadOnlySpan<char> code)
+    {
+        for (int i = 0; i < code.Length; i++)
+        {
+            if (code[i] < 48 || code[i] > 57)
+            {
+                return false;
+            }
+        }
 
-    internal static int LuhnSum(ReadOnlySpan<char> code, int startingPosition)
+        return true;
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+    internal static int Sum(ReadOnlySpan<char> code, int startingPosition)
     {
         int sum = 0;
         for (int pos = startingPosition, i = code.Length - 1; i >= 0; pos++, i--)

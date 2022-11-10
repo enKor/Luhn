@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
-		<AssemblyName>EnKor.Luhn.Lib</AssemblyName>
-		<RootNamespace>EnKor.Luhn.Lib</RootNamespace>
+		<AssemblyName>EnKor.Luhn</AssemblyName>
+		<RootNamespace>EnKor</RootNamespace>
 	</PropertyGroup>
 
 </Project>

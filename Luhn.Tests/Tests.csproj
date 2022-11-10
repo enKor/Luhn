@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<Nullable>enable</Nullable>
 
 		<AssemblyName>EnKor.Luhn.Tests</AssemblyName>
-		<RootNamespace>EnKor.Luhn.Tests</RootNamespace>
+		<RootNamespace>EnKor.Tests</RootNamespace>
 
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Luhn.Lib\Luhn.Lib.csproj" />
+	  <ProjectReference Include="..\Luhn.Lib\Lib.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-﻿namespace EnKor.Luhn.Lib;
+﻿namespace EnKor;
 
 internal static class NumericExtender
 {
-    public static bool IsEven(this int number) => number % 2 == 0;
+    internal static bool IsEven(this int number) => number % 2 == 0;
 }
