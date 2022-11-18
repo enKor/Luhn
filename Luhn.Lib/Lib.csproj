@@ -7,6 +7,19 @@
 
 		<AssemblyName>EnKor.Luhn</AssemblyName>
 		<RootNamespace>EnKor</RootNamespace>
+
+		<PackageId>EnKor.Luhn</PackageId>
+		<Description>Very performant generator and verifier of number by Luhn algorithm</Description>
+		<PackageProjectUrl>https://github.com/enKor/Luhn</PackageProjectUrl>
+		<PackageLicense>https://github.com/enKor/Luhn/blob/main/LICENSE</PackageLicense>
+		<!--<PackageIconUrl>https://github.com/enKor/Luhn/blob/main/logo.png</PackageIconUrl>-->
+		<PackageTags>Luhn;csharp;credit;card;validator;check;enkor</PackageTags>
+		<Authors>Martin Procházka</Authors>
+		<Version>1.0.0</Version>
+		<PackageReleaseNotes>Init version</PackageReleaseNotes>
+		<!--<PublishRepositoryUrl>true</PublishRepositoryUrl>-->
+		<!--<EmbedUntrackedSources>true</EmbedUntrackedSources>-->
+		<!--<DebugType>embedded</DebugType>-->
 	</PropertyGroup>
 
 </Project>
