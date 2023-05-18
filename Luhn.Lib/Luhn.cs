@@ -14,9 +14,9 @@ public static class Luhn
     /// <returns>Check digit</returns>
     public static int CalculateCheckDigit(ReadOnlySpan<char> code)
     {
-        var sum = Sum(code, 2);
+        int sum = Sum(code, 2);
 
-        var mod = sum % 10;
+        int mod = sum % 10;
 
         return mod == 0
             ? 0
@@ -30,7 +30,7 @@ public static class Luhn
     /// <returns><c>true</c> when code is valid</returns>
     public static bool IsValid(ReadOnlySpan<char> code)
     {
-        var sum = Sum(code, 1);
+        int sum = Sum(code, 1);
 
         return sum % 10 == 0;
     }
@@ -61,7 +61,7 @@ public static class Luhn
         {
             if (pos.IsEven())
             {
-                var doubled = (code[i] - '0') * 2;
+                int doubled = (code[i] - '0') * 2;
                 if (doubled == 10)
                 {
                     sum += 1;
