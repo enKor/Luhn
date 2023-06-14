@@ -1,7 +1,13 @@
+# Luhn
 
-# Benchmarks
+## Installation
+You can install the EnKor.Luhn  NuGet package via the NuGet Package Manager or by using the following command in the Package Manager Console:
 
-**EnKor's Luhn algorithm implementation is 95x faster and allocates no memory** compared to most downloaded nuget CreditValidator (867K downloads) or 17x to LuhnNet (39K downloads - 2nd most downloaded).
+    Install-Package EnKor.Luhn 
+
+## Benchmarks
+
+**EnKor's Luhn algorithm implementation is 95x faster and allocates no memory** compared to most downloaded nuget CreditValidator or 17x to LuhnNet (the 2nd most downloaded - so far :-) ).
 
 
 Test results of method **CalculateCheckDigit** (or respective variant in other nugets) to calculate check digit.
